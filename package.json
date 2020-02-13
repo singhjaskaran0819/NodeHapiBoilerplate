@@ -1,0 +1,27 @@
+{
+  "name": "nodehapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon server.js",
+    "debug": "NODE_ENV=development node --inspect-brk=33749 server.js"
+  },
+  "author": "Jaskaran Singh",
+  "author_email": "jaskaran.singh@chicmic.co.in",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "@hapi/hapi": "^19.1.0",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.0",
+    "@hapi/vision": "^6.0.0",
+    "colors": "^1.4.0",
+    "hapi-auth-jwt2": "^9.0.1",
+    "hapi-swagger": "^12.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.11"
+  }
+}
