@@ -71,9 +71,6 @@ let Routes = [
         options: {
             auth: false,
             tags: ['api', 'Users'],
-            log: {
-                collect: true
-            },
             description: 'User login.',
             notes: 'User login.',
             plugins: {

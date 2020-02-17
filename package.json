@@ -22,6 +22,7 @@
     "hapi-auth-jwt2": "^9.0.1",
     "hapi-swagger": "^12.1.0",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
     "mongoose": "^5.8.11"
   }
 }

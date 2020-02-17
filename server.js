@@ -4,6 +4,7 @@ const Hapi = require('@hapi/hapi'),
     CONFIG = require('./utils/config'),
     plugins = require('./utils/plugins'),
     colors = require('colors'),
+    moment = require("moment"),
     validate = require('./common/utilityFunctions').validate;
 
 /**
@@ -34,10 +35,10 @@ const init = async () => {
     console.log('Server running on', `${server.info.uri}`.yellow);
 
     /**
-     * for logging event
+     * for logging requests
      */
     server.events.on('response', function (request) {
-        console.log(`[${new Date().toISOString()}]`.yellow + ' ' + request.method.toUpperCase().bold + ' ' + request.path.toString().green + ' ' + request.response.statusCode.toString().blue.bold);
+        console.log(`[${moment(new Date()).format('LLL')}]`.yellow + ' ' + request.method.toUpperCase().bold + ' ' + request.path.toString().green + ' ' + request.response.statusCode.toString().blue.bold);
     });
 };
 

@@ -49,6 +49,7 @@ userController.login = async (req, h) => {
     const user = await SERVICES.userService.getUser({ email: req.payload.email }, { password: 1 });
     if (user) {
         if (user.password === req.payload.password) {
+            delete user.password;
             const accessToken = common.generateToken(user);
             Object.assign(user, { token: accessToken });
             return Object.assign(constants.RESPONSEMESSAGES.SUCCESS.MISSCELANEOUSAPI(constants.MESSAGES.SUCCESSFULLYLOGGEDIN), { user });
